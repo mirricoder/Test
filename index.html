@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop trendy, durable, and comfortable shoes at ShoeHaven. Join our community and step into style.">
+  <meta name="keywords" content="shoes, sneakers, heels, kids shoes, ShoeHaven, online shoe store">
+  <title>ShoeHaven</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
+
+  <style>
+    .testimonial-slide {
+      display: none;
+    }
+    .testimonial-slide.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- Navbar -->
+  <!-- Navigation Bar -->
+<nav class="bg-[#1F2937] text-white px-6 py-4 shadow-lg">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    
+    <!-- Left: Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="images/logo1.jpg" alt="ShoeHaven Logo" class="h-10 w-10 rounded-full object-cover">
+      <span class="text-2xl font-bold">ShoeHaven</span>
+    </div>
+
+    <!-- Center: Navigation Links (Desktop) -->
+    <!-- Desktop Navigation Links -->
+      <ul class="hidden md:flex space-x-6 text-lg font-medium relative">
+        <li class="relative group">
+          <a href="#home" class="hover:text-[#F59E0B] transition">Home</a>
+        </li>
+        <li class="relative group">
+          <a href="#about" class="hover:text-[#F59E0B] transition">About</a>
+          <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded shadow-lg hidden group-hover:block">
+            <li><a href="#team" class="block px-4 py-2 hover:bg-gray-100">Our Team</a></li>
+            <li><a href="#story" class="block px-4 py-2 hover:bg-gray-100">Our Story</a></li>
+          </ul>
+        </li>
+        <li class="relative group">
+          <a href="#services" class="hover:text-[#F59E0B] transition">Services</a>
+          <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded shadow-lg hidden group-hover:block">
+            <li><a href="#shipping" class="block px-4 py-2 hover:bg-gray-100">Shipping</a></li>
+            <li><a href="#returns" class="block px-4 py-2 hover:bg-gray-100">Returns</a></li>
+          </ul>
+        </li>
+        
+        <li class="relative group">
+          <a href="#categories" class="hover:text-[#F59E0B] transition">Categories</a>
+          <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded shadow-lg hidden group-hover:block">
+            <li><a href="#men" class="block px-4 py-2 hover:bg-gray-100">Men</a></li>
+            <li><a href="#women" class="block px-4 py-2 hover:bg-gray-100">Women</a></li>
+            <li><a href="#kids" class="block px-4 py-2 hover:bg-gray-100">Kids</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact" class="hover:text-[#F59E0B] transition">Contact</a></li>
+      </ul>
+
+
+    <!-- Right: Call to Action Button (Desktop) -->
+     <!-- CTA Button -->
+      <div class="hidden md:block">
+        <a href="#shop" class="bg-[#F59E0B] hover:bg-yellow-500 text-white font-semibold px-5 py-2 rounded-full transition duration-300">
+          Shop Now
+        </a>
+      </div>
+
+    <!-- Mobile: Hamburger Icon -->
+    <div class="md:hidden">
+      <button onclick="toggleMenu()" class="text-white text-2xl focus:outline-none">&#9776;</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden mt-4">
+      <ul class="flex flex-col space-y-3 bg-[#111827] rounded-lg p-4 text-white font-medium">
+        <li><a href="#home" class="hover:text-[#F59E0B]">Home</a></li>
+        <li><a href="#about" class="hover:text-[#F59E0B]">About</a></li>
+        <li><a href="#services" class="hover:text-[#F59E0B]">Services</a></li>
+        <li><a href="#categories" class="hover:text-[#F59E0B]">Categories</a></li>
+        <li><a href="#contact" class="hover:text-[#F59E0B]">Contact</a></li>
+        <li><a href="#shop" class="bg-[#F59E0B] hover:bg-yellow-500 text-white px-4 py-2 rounded-full text-center">Shop Now</a></li>
+      </ul>
+    </div>
+</nav>
+
+  <main class="grid gap-16 px-8 py-12 max-w-7xl mx-auto">
+    <!-- Hero Section -->
+    <section class="bg-[#E0F2FE] py-16 px-8 rounded-xl text-center md:text-left">
+      <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+        <img src="images/logo1.jpg" alt="Brand logo left" class="h-24 mx-auto md:mx-0">
+        <div>
+          <h2 class="text-4xl font-bold mb-4">Step Into Comfort With ShoeHaven</h2>
+          <p class="text-lg mb-6">Trendy, durable, and comfy shoes for every walk of life.</p>
+          <button class="bg-[#1E3A8A] text-white px-6 py-3 rounded-full hover:bg-[#1E40AF]">Get Started</button>
+        </div>
+        <img src="images/logo.jpg" alt="Brand logo right" class="h-43 mx-auto md:ml-auto">
+      </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="py-16 bg-[#fef6f3]">
+  <h3 class="text-center text-3xl font-semibold mb-12 text-gray-800">Explore Our Shoe Collections</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <h4 class="text-xl font-semibold mb-2 text-gray-800">Men's Sneakers</h4>
+      <p class="mb-4 text-gray-600">Stylish and comfortable sneakers designed for daily wear.</p>
+      <button class="bg-[#004c45] text-white px-6 py-3 rounded-full hover:bg-[#003f3a] transition">Get Started</button>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <h4 class="text-xl font-semibold mb-2 text-gray-800">Women's Heels</h4>
+      <p class="mb-4 text-gray-600">Elegant heels for every occasion, from casual to formal.</p>
+      <button class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transition">Explore</button>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <h4 class="text-xl font-semibold mb-2 text-gray-800">Kids' Collection</h4>
+      <p class="mb-4 text-gray-600">Playful and sturdy shoes designed for little feet on the go.</p>
+      <button class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition">Explore</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Community Section -->
+    <section class="bg-[#ffdbe1] px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
+  <div class="max-w-xl">
+    <h3 class="text-2xl font-bold mb-2 text-[#1e1e1e]">Join the ShoeLovers Community</h3>
+    <p class="mb-4 text-gray-700">Connect with other shoe enthusiasts, share styles, and discover exclusive deals in a supportive fashion space.</p>
+    <button class="bg-[#004c45] text-white px-6 py-2 rounded-full hover:bg-[#003f3a] transition">Join Now</button>
+  </div>
+  <img src="images/shoe4.png" alt="Join community" class="w-60">
+</section>
+
+
+    <!-- FAQs Section -->
+    <section class="bg-[#e9dcf9] px-8 py-16 rounded-xl">
+  <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+    <img src="images/shoe3.png" alt="FAQ visual" class="rounded-3xl">
+    <div>
+      <h3 class="text-3xl font-bold mb-6 text-gray-800">Frequently Asked Questions</h3>
+      <div id="faq-list" class="space-y-4"></div>
+      <div class="mt-8">
+        <input id="new-question" type="text" placeholder="Ask a new question..." class="w-full px-4 py-2 border rounded mb-2">
+        <input id="new-answer" type="text" placeholder="Answer..." class="w-full px-4 py-2 border rounded mb-2">
+        <button onclick="addQuestion()" class="bg-[#004c45] text-white px-4 py-2 rounded hover:bg-[#003f3a] transition">Add Question</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Testimonials Slider -->
+    <section class="px-8 py-16 bg-[#fff9e5]">
+  <h3 class="text-3xl font-semibold text-center mb-8 text-gray-800">What Our Customers Say</h3>
+  <div class="relative max-w-3xl mx-auto">
+    <!-- Individual slides: no changes needed except maintaining color -->
+    <div class="testimonial-slide active text-center px-6 py-8 rounded-xl bg-yellow-100 shadow-md">
+      <p class="text-lg italic mb-4">"Absolutely love my new sneakers from ShoeHaven! So comfy and stylish!"</p>
+      <h4 class="text-md font-semibold">– Sarah L., New York</h4>
+    </div>
+    
+    <!-- ... Other slides ... -->
+    <div class="absolute inset-y-0 left-0 flex items-center">
+      <button onclick="prevSlide()" class="bg-[#004c45] text-white px-3 py-2 rounded-full hover:bg-[#003f3a]">&#8592;</button>
+    </div>
+    <div class="absolute inset-y-0 right-0 flex items-center">
+      <button onclick="nextSlide()" class="bg-[#004c45] text-white px-3 py-2 rounded-full hover:bg-[#003f3a]">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section for Shoe Haven -->
+<section class="bg-[#f2f3f7] py-20 px-6 lg:px-20 font-sans">
+  <div class="max-w-6xl mx-auto text-center mb-16">
+    <p class="text-sm uppercase text-gray-500 tracking-wide">Get in Touch</p>
+    <h2 class="text-4xl font-bold text-gray-900 mb-4">We’re Here to Support You</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      Whether you have questions, need help choosing the perfect pair, or want to learn more about Shoe Haven — reach out anytime.
+    </p>
+  </div>
+
+  <div class="bg-white rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row justify-between items-start gap-10 shadow-md">
+    <!-- Contact Details -->
+    <div class="flex-1 space-y-6">
+      <div>
+        <p class="text-gray-900 font-semibold mb-1">Email:</p>
+        <p class="text-gray-600">support@shoehaven.com</p>
+      </div>
+      <div>
+        <p class="text-gray-900 font-semibold mb-1">Phone:</p>
+        <p class="text-gray-600">+1 (555) 987-6543</p>
+      </div>
+      <div>
+        <p class="text-gray-900 font-semibold mb-1">Address:</p>
+        <p class="text-gray-600">456 Comfort Lane, Style City, CA 90001</p>
+      </div>
+      <div class="flex space-x-4 pt-4">
+  <a href="#" target="_blank">
+    <img src="https://www.svgrepo.com/show/349426/linkedin.svg" alt="LinkedIn" class="w-5 h-5">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://www.instagram.com/umojashoe/?hl=en" alt="Instagram" class="w-5 h-5">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://www.svgrepo.com/show/475645/facebook-color.svg" alt="Facebook" class="w-5 h-5">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://www.svgrepo.com/show/475699/whatsapp-color.svg" alt="WhatsApp" class="w-5 h-5">
+  </a>
+</div>
+      <p class="text-sm text-gray-500 pt-4">We typically respond within 12 hours.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="flex-1 bg-[#fef6f3] rounded-2xl p-6 w-full max-w-md mx-auto">
+  <form action="#" method="POST" class="space-y-6">
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+      <input type="email" id="email" name="email" class="mt-1 block w-full border-b border-gray-300 bg-transparent focus:outline-none focus:border-black py-2" required>
+    </div>
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+      <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-b border-gray-300 bg-transparent focus:outline-none focus:border-black py-2 resize-none" required></textarea>
+    </div>
+    <button type="submit" class="w-full bg-[#004c45] text-white py-3 rounded-full font-semibold hover:bg-[#003f3a] transition">Send Message</button>
+  </form>
+</div>
+
+</section>
+<!-- Footer & Support Box Section -->
+<section class="bg-[#f2f3f7] px-6 lg:px-20 pb-20 pt-10">
+  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+    
+    <!-- Left Footer Box -->
+    <div class="bg-white rounded-2xl p-8 flex-1 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-600 shadow-md">
+      <div>
+        <h3 class="font-bold text-gray-800 mb-3">Shoe Haven</h3>
+        <ul class="space-y-2">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-800 mb-3">Connect</h3>
+        <ul class="space-y-2">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-800 mb-3">Legal</h3>
+        <ul class="space-y-2">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-span-full pt-4 text-xs text-gray-400">
+        © 2025 Shoe Haven. All rights reserved.
+      </div>
+    </div>
+
+ 
+    <!-- Right Support Box -->
+<div class="bg-[#004c45] rounded-2xl p-8 flex-1 text-white shadow-md flex flex-col justify-between relative overflow-hidden">
+  <div class="space-y-4 z-10">
+    <h3 class="text-2xl font-bold leading-tight">Find Support,<br>Guidance,<br>and Balance.</h3>
+    <a href="#" class="inline-block bg-white text-[#003f3a] font-semibold rounded-full py-2 px-5 mt-4 hover:bg-[#00665a] transition" aria-label="Get support and guidance now">Find Support Now</a>
+  </div>
+  <div class="absolute right-4 top-4 space-x-2 flex">
+    <div class="w-4 h-4 bg-green-300 rounded-full"></div>
+    <div class="w-5 h-5 bg-yellow-400 rounded-full"></div>
+    <div class="w-6 h-6 bg-pink-400 rounded-full"></div>
+    <div class="w-4 h-4 bg-orange-400 rounded-full"></div>
+  </div>
+</div>
+
+      
+</section>
+
+  </main>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Toggle mobile menu
+    function toggleMenu() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+    window.toggleMenu = toggleMenu;
+
+    // Testimonial slider
+    const slides = document.querySelectorAll('.testimonial-slide');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        slide.classList.toggle('hidden', i !== index); // Add this if your CSS doesn't handle 'active' visibility
+      });
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex); // Show initial slide
+    setInterval(autoSlide, 5000);
+
+    // FAQ Section
+    const faqList = document.getElementById("faq-list");
+    const questions = [
+      { q: "What sizes are available for your shoes?", a: "We offer sizes ranging from US 5 to 13 for most styles. Availability may vary by product." },
+      { q: "How can I track my order?", a: "Once your order ships, you’ll receive a tracking number via email to monitor delivery progress." },
+      { q: "Do you offer returns or exchanges?", a: "Yes, we accept returns within 30 days of purchase as long as the shoes are unworn and in original packaging." },
+      { q: "Are your shoes authentic?", a: "Absolutely. Shoe Haven guarantees 100% authentic and brand-new footwear." },
+      { q: "Do you ship internationally?", a: "Currently, we only ship within the country, but international shipping is coming soon!" },
+      { q: "Can I cancel or change my order after placing it?", a: "Orders can be modified within 2 hours of placing them. Contact our support team right away for changes." }
+    ];
+
+    function renderFAQs() {
+      faqList.innerHTML = "";
+      questions.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = "bg-white rounded-lg shadow px-6 py-4 mb-2";
+        div.innerHTML = `
+          <button onclick="toggleAnswer(${index})" class="flex justify-between w-full text-left font-semibold">
+            <span>${item.q}</span>
+            <span id="icon-${index}">+</span>
+          </button>
+          <div id="answer-${index}" class="mt-2 text-gray-600 hidden">
+            <p>${item.a}</p>
+          </div>`;
+        faqList.appendChild(div);
+      });
+    }
+
+    window.toggleAnswer = function (index) {
+      const answer = document.getElementById(`answer-${index}`);
+      const icon = document.getElementById(`icon-${index}`);
+      const isHidden = answer.classList.contains("hidden");
+
+      // Close all first
+      document.querySelectorAll('[id^="answer-"]').forEach(el => el.classList.add("hidden"));
+      document.querySelectorAll('[id^="icon-"]').forEach(el => el.textContent = "+");
+
+      // Toggle selected
+      if (isHidden) {
+        answer.classList.remove("hidden");
+        icon.textContent = "−";
+      }
+    }
+
+    window.addQuestion = function () {
+      const qInput = document.getElementById("new-question");
+      const aInput = document.getElementById("new-answer");
+      const q = qInput.value.trim();
+      const a = aInput.value.trim();
+
+      if (q && a) {
+        questions.push({ q, a });
+        renderFAQs();
+        qInput.value = "";
+        aInput.value = "";
+      } else {
+        alert("Please enter both a question and an answer.");
+      }
+    }
+
+    renderFAQs();
+  });
+  function toggleMenu() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+</script>
+
+  
+
+</body>
+
+</html>
